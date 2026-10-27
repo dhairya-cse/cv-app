@@ -16,8 +16,8 @@ config:
   sections:
     experience:
       field-map:
-        title: company
-        subtitle: position
+        title:  position
+        subtitle: company
         rhsTop: duration
         rhsBottom: location
         bullets: responsibilities
@@ -36,3 +36,6 @@ config:
 
     technical_skills:
       bullets_cols: 2
+
+    links:
+      bullets_cols: 3

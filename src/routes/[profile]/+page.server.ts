@@ -7,6 +7,8 @@ export const load: PageServerLoad = (event) => {
 	return { user: event.locals.user, post: event.params.profile };
 };
 
+
+//TODO: move these actions to another file
 export const actions: Actions = {
 	signOut: async (event) => {
 		await auth.api.signOut({

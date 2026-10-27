@@ -1,4 +1,5 @@
 import { cvFileExists, loadConfigFile, loadCvFile, mergeObjectsRecursive, yamlContentToMap } from '#lib/utils.ts';
+import { error, redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = async (event) => {
@@ -24,6 +25,11 @@ export const load: LayoutServerLoad = async (event) => {
         cv = cvFileContent['cv']
         config = yamlContentToMap(await loadConfigFile())
         mergeObjectsRecursive(config, cvFileContent['config']);
+    } else {
+        if (canEdit) {
+            redirect(303, `/${profile}/edit`);
+        }
+        error(404, 'Not found');
     }
 
     return {
