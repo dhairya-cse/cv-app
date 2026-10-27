@@ -5,7 +5,7 @@ import type { User, Session } from 'better-auth';
 declare global {
 	namespace App {
 		interface Locals {
-			user?: User;
+			user?: User & { preferred_username: string};
 			session?: Session;
 		}
 
@@ -16,4 +16,4 @@ declare global {
 	}
 }
 
-export {};
+export { };

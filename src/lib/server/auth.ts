@@ -14,6 +14,16 @@ import { getRequestEvent } from '$app/server';
 export const auth = betterAuth({
 	baseURL: ORIGIN,
 	secret: BETTER_AUTH_SECRET,
+	user: {
+		additionalFields: {
+			preferred_username: {
+				type: 'string',
+				required: true,
+				defaultValue: null,
+				input: true
+			}
+		}
+	},
 	plugins: [
 		genericOAuth({
 			config: [
@@ -24,7 +34,12 @@ export const auth = betterAuth({
 					discoveryUrl: KEYCLOAK_DISCOVERY_URL,
 					scopes: ['openid', 'profile', 'email'],
 					pkce: true,
-					redirectURI: `${ORIGIN}/api/auth/callback/keycloak`
+					redirectURI: `${ORIGIN}/api/auth/callback/keycloak`,
+					mapProfileToUser: (profile) => {
+						return {
+							preferred_username: profile.preferred_username
+						};
+					}
 				}
 			]
 		}),

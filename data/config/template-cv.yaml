@@ -1,0 +1,138 @@
+cv:
+  name: "Dhairya Bhardwaj"
+  contacts:
+    phone: "+44 7741 383793"
+    email: "dhairya.cse@gmail.com"
+    linkedin: "https://linkedin.com/in/dhairya-cse"
+    github: "https://github.com/dhairya-cse"
+
+  sections:
+    professional_summary:
+      description: "Experienced Software Engineer specialising in scalable, secure, and modular software development. Contributed to fintech application serving over **25 million users**, with expertise in **backend systems and cloud technologies**. Skilled at aligning technical solutions with business goals and driving innovation through collaboration in a **dynamic and agile environment**. Enthusiastic about integrating AI technologies to create impactful, **customer-focused** products."
+    experience:
+      title: "Professional Experience"
+      subsections:
+        alba:
+          company: "AlbaCo Ltd."
+          position: "Software Engineer"
+          location: "London, UK"
+          duration: "May 2023 – Current"
+          responsibilities:
+            - "Contributing to **authorisation** journey of Alba with foundational technological development."
+            - "Collaborated with cross-functional teams to understand requirements and developed backend services for deposits origination and operations portal using a microservices architecture, ensuring robustness with unit tests."
+            - "Integrated **Mambu** for core banking and **RiskNarrative (LexisNexis)** APIs for KYC workflows."
+            - "Designed and developed an in-house Task Approval system for operations portal with extensible architecture to support evolving business use cases."
+            - "Utilised Spring Security with **Microsoft Entra ID** to set up **Role-Based Access Control (RBAC)** ensuring secure access to the APIs."
+            - "Automated annual statements generation and **Experian CAIS** file creation with Azure Function Apps in Python. Currently training on Microsoft Power Platform tools, including Power Automate and Power Apps, for developing scalable workflow automations and low-code applications."
+            - "**Tech Stack**: Java 17, Spring Boot, Python 3, Microsoft Azure, Azure Function Apps, SQL Server, Redis"
+
+        dhani:
+          company: "Dhani Loans and Services Ltd."
+          position: "Software Engineer"
+          location: "Mumbai, Maharashtra"
+          duration: "Jul 2021 – Apr 2023"
+          responsibilities:
+            - "Contributed to the backend development of an established **high-scale transactional application (wallet)** serving over **25 million users.**"
+            - "Integrated various **payments, billers, and KYC APIs**: Billdesk, Razorpay, Karza, Surepass, Digio, Euronet."
+            - "Migrated on-premises testing environment to AWS with automated deployment using GitHub Actions."
+            - "Implemented scheduled jobs for **reconciliation of payments.**"
+            - "Used RegEx for parsing inputs, transforming text, and masking sensitive data in logs."
+            - "**Automated and streamlined** various ad-hoc recurring tasks using Python scripts, increasing developer efficiency."
+            - "**Tech Stack**: Java 8, Java 11, Spring Boot, Python 3, AWS, Google Cloud Platform (GCP), Redis, MySQL, Git SCM"
+
+        appperfect:
+          company: "AppPerfect Corp."
+          position: "Software Engineer"
+          location: "Udaipur, Rajasthan"
+          duration: "Dec 2017 – Feb 2018"
+          responsibilities:
+            - "Developed an interface-driven system to collect and standardise data from multiple crypto exchanges utilising REST APIs."
+            - "**Tech Stack**: Java 8, Selenium, Apache Cassandra"
+
+    technical_skills:
+      bullets:
+        languages: "Java 8, Java 11, Java 17, Python 3, C, C++, JavaScript, TypeScript"
+        frameworks: "Spring Boot, Flask, Next.js, React"
+        cloud: "Microsoft Azure, GCP, AWS"
+        tools: "Git, Docker, Nginx"
+        databases: "MySQL, MongoDB, Redis, SQL"
+        others: "NumPy, SciPy, WebAssembly (WASM), Microsoft Power Platform, LangChain"
+
+    education:
+      subsections:
+        iitm:
+          institution: "Indian Institute of Technology, Madras"
+          degree: "Master of Technology in Computer Science & Engineering"
+          year: "2021"
+          cgpa: "8.71/10"
+          location: "Chennai, Tamil Nadu"
+          bullets:
+            - "Graduated from IIT Madras ([*ranked #1 engineering institute in India by NIRF*](https://www.iitm.ac.in/happenings/press-releases-and-coverages/peerless-iit-madras-sweeps-top-positions-nirf-rankings)) with a strong focus on Advanced and Distributed Algorithms, Natural Language Processing, and Speech Processing."
+            - "Secured S grade (highest distinction) in master's project [*Bhariavi*](https://bhariavi.jinsil.me)"
+        skit:
+          institution: "Swami Keshvanand Institute of Technology, Jaipur"
+          degree: "Bachelor of Technology in Computer Science & Engineering"
+          year: "2018"
+          cgpa: "7.74/10"
+          location: "Jaipur, Rajasthan"
+
+    projects:
+      subsections:
+        jinsil:
+          link: "https://ink.jinsil.me"
+          name: "Jinsil: Personal Projects and Self-Hosting"
+          description:
+            - "Hosted [*Bhariavi*](https://bhariavi.jinsil.me) and my personal blog [*ink.jinsil.me*](https://ink.jinsil.me) using Docker Compose and Caddy web server."
+            - "Self-hosted [*postal mail server*](https://postal.jinsil.me/) for sending emails with no-reply@jinsil.me email ID, and [*Keycloak*](https://auth.jinsil.me/) for identity and access management."
+            - "Developed and hosted [*yaml2cv*](https://github.com/dhairya-cse/yaml2cv), a web app that simplifies CV creation using YAML, featuring live editing and real-time preview."
+            - "Configured Keycloak as an OpenID Connect provider to enable Single Sign-On (SSO) across supported services."
+            - "**Tech Stack**: Docker, Docker Compose, Ubuntu 24.10, Caddy, Keycloak, Postal, Next.js, Cloudflare"
+
+        bhairavi:
+          link: "https://github.com/dhairya-cse/bhairavi"
+          name: "Bhairavi: A Music Learning Application"
+          description:
+            - "Developed a web-based music learning app that allows users to pratice singing by singing along to a re-synthesised audio in their preferred pitch instead of trying to match the singer's pitch."
+            - "Used Spleeter for extraction of vocal tracks from a song, Essentia for pitch analysis, and re-synthesised audio using a five-harmonic synthesiser."
+            - "Compiled C language programs to WASM for running high-performance routines in web browsers."
+            - "**Tech Stack**: Python 3, Flask, Jinja2, JS, WebAssembly (WASM), C, Spleeter, Essentia, Web Audio API"
+
+        irs:
+          name: "Information Retrieval System"
+          description:
+            - "Implemented Explicit Semantic Analysis for calculating document and word similarity scores using Wikipedia articles that can be used to retrieve the most relevant documents from an information base."
+            - "Used TF-IDF for creating word embeddings and PageRank Analysis for concept weights."
+            - "**Tech Stack**: Python 3, NumPy, SciPy"
+
+        idv:
+          name: "Speaker Identification & Verification System"
+          description:
+            - "Developed a text-independent speaker identification and verification system based on the UBM-GMM Model."
+            - "Trained the model on a datasets, consisting of 200 speakers, achieving 85% accuracy for speaker identification and a 1% Equal Error Rate (EER) for speaker verification"
+            - "**Tech Stack**: Python 3, NumPy, SciPy"
+            
+        time-table-gen:
+          name: "Automatic Timetable Generator"
+          description:
+            - "Developed a Genetic Algorithm-based software for generating timetables and classroom allocations for universities."
+            - "**Tech Stack**: Python 3, PyQt 5"
+
+    miscellaneous:
+      bullets:
+        - "Secured All India Rank **116 among 99,932** candidates in **GATE 2019.**"
+        - "**Mentored** students as Teaching Assistant and received Star TA award."
+        - "[*Exploring*](https://github.com/dhairya-cse/wall-e-t) Large Language Models (LLMs) to develop conversational interfaces for fintech applications, check [*Wall-e-t*](https://github.com/dhairya-cse/wall-e-t)"
+        - "Personal interests: Computational Art, music."
+    links:
+      bullets:
+        - "[*Wall-e-t repo*](https://github.com/dhairya-cse/wall-e-t)"
+        - "[*Bhairavi: bhairavi.jinsil.me*](https://bhairavi.jinsil.me/)"
+        - "[*yaml2cv: cv.jinsil.me*](https://cv.jinsil.me)"
+        - "[*Blog: ink.jinsil.me*](https://ink.jinsil.me/)"
+        - "[*Bhairavi repo*](https://github.com/dhairya-cse/bhairavi)"
+        - "[*yaml2cv repo*](https://github.com/dhairya-cse/yaml2cv)"
+
+config:
+  sections:
+    links:
+      bullets_cols: 3

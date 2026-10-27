@@ -16,7 +16,5 @@ export const variables = defineEnvVars({
 		description:
 			'GitHub OAuth client secret. See [Better Auth Keycloak provider](https://www.better-auth.com/docs/authentication/github).'
 	},
-	KEYCLOAK_DISCOVERY_URL: {
-
-	}
+	KEYCLOAK_DISCOVERY_URL: {}
 });
