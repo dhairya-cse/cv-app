@@ -1,8 +1,9 @@
 <script lang="ts">
-    let {cv, config} = $props();
+	import type { Cv } from '#lib/types/cv-schema.ts';
+
+	let { cv }: { cv: Cv } = $props();
 </script>
 
-
 <p>
-{JSON.stringify(config)}
+	{JSON.stringify(cv, null, 2)}
 </p>

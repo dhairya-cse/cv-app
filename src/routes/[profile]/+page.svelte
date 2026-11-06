@@ -4,4 +4,4 @@
 	let { data }: PageProps = $props();
 </script>
 
-<Resume cv={data.cv} config={data.config}></Resume>
+<Resume cv={data.cv}></Resume>

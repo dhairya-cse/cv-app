@@ -1,13 +1,13 @@
-import { cvFileExists, loadConfigFile, loadCvFile, mergeObjectsRecursive, yamlContentToMap } from '#lib/utils.ts';
+import { cvFileExists, getRenderedCvAndConfig } from '#lib/utils/utils.ts';
 import { error, redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
+import type { Cv } from '#lib/types/cv-schema.ts';
 
 export const load: LayoutServerLoad = async (event) => {
     const loggedInUser = event.locals.user;
 
     let loggedInUserName: string | null = null;
-    let cv: object | undefined;
-    let config: object | undefined;
+    let cv: Cv;
 
     if (loggedInUser && loggedInUser) {
         loggedInUserName = loggedInUser.preferred_username;
@@ -18,13 +18,8 @@ export const load: LayoutServerLoad = async (event) => {
     const canEdit = profile === loggedInUserName;
     const cvExists = await cvFileExists(profile);
 
-
     if (cvExists) {
-        const cvFile = await loadCvFile(profile);
-        const cvFileContent = yamlContentToMap(cvFile);
-        cv = cvFileContent['cv']
-        config = yamlContentToMap(await loadConfigFile())
-        mergeObjectsRecursive(config, cvFileContent['config']);
+        cv = await getRenderedCvAndConfig(profile);
     } else {
         if (canEdit) {
             redirect(303, `/${profile}/edit`);
@@ -38,7 +33,6 @@ export const load: LayoutServerLoad = async (event) => {
         profile,
         canEdit,
         cvExists,
-        config,
         cv
     };
 };

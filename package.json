@@ -44,7 +44,7 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
-		"better-sqlite3": "^13.0.2",
+		"colord": "^2.10.0",
 		"yaml": "^2.9.1"
 	}
 }

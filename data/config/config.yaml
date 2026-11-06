@@ -15,20 +15,18 @@ config:
 
   sections:
     experience:
-      field-map:
-        title:  position
+      field_map:
+        title: position
         subtitle: company
         rhsTop: duration
         rhsBottom: location
-        bullets: responsibilities
 
     projects:
-      field-map:
+      field_map:
         title: name
-        bullets: description
 
     education:
-      field-map:
+      field_map:
         title: institution
         subtitle: "{{degree}}, CGPA: {{cgpa}}"
         rhsTop: year
